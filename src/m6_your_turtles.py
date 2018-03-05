@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Tuzheng Wei.
 """
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m4e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -27,3 +27,30 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+blue_turtle = rg.SimpleTurtle('turtle')
+blue_turtle.pen = rg.Pen('purple', 5)
+blue_turtle.speed = 20
+henry_pen = rg.SimpleTurtle('turtle')
+henry_pen.pen = rg.Pen("red",10)
+henry_pen.speed = 5
+
+size = 200
+
+for k in range(5):
+    blue_turtle.draw_square(size)
+    henry_pen.draw_circle(10)
+    henry_pen.left(10)
+    blue_turtle.pen_up()
+    henry_pen.left(20)
+    blue_turtle.right(45)
+    blue_turtle.forward(10)
+    blue_turtle.left(45)
+    blue_turtle.pen_down()
+
+
+window.close_on_mouse_click()
+
